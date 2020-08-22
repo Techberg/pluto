@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import ContentModel from "./pages/content-model/content-model";
+import AddContentModel from "./pages/content-model/add";
+import ContentModelHome from "./pages/content-model/index";
+import { Router } from "@reach/router";
+import Index from "./pages";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Index path="/"></Index>
+        <ContentModel path="/content-model">
+          <ContentModelHome path="/"></ContentModelHome>
+          <AddContentModel path="add"></AddContentModel>
+        </ContentModel>
+      </Router>
     </div>
   );
 }
