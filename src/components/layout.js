@@ -5,8 +5,8 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  Icon,
 } from "@material-ui/core";
+
 import { css } from "@emotion/core";
 
 const Layout = ({ children, title, right }) => {
@@ -45,7 +45,7 @@ const Layout = ({ children, title, right }) => {
 Layout.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.element,
-  right: PropTypes.element
+  right: PropTypes.element,
 };
 
 export default Layout;
