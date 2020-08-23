@@ -1,7 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import "@testing-library/jest-dom/extend-expect" // Add custom matcher
 import Layout from "../layout";
+
 
 test("Check if layout display title according to prop", async () => {
   const { getByText } = render(<Layout title={"Abc"} />);

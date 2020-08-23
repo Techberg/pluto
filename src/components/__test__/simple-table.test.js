@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import SimpleTable from "../simple-table";
 import "@testing-library/jest-dom";
+import "@testing-library/jest-dom/extend-expect" // Add custom matcher
 
 describe("Checking with column header", () => {
   const columns = ["A", "B"];
